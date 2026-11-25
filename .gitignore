@@ -1,0 +1,35 @@
+# Terraform working files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Real variable and backend values (may hold emails or account IDs)
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+backend.hcl
+
+# Credentials: never commit these
+.env
+.env.*
+*.pem
+*.key
+.aws/
+credentials
+
+# Tool caches and OS noise
+.tflint.d/
+.DS_Store
+.idea/
+.vscode/
+__pycache__/

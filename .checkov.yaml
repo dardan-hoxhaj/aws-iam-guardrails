@@ -1,0 +1,15 @@
+# Checkov: static security scanner for Terraform and GitHub Actions.
+# Any failed check fails CI. Skips are done inline next to the resource with
+# a written reason (search for "checkov:skip"), so every exception is visible
+# in code review.
+framework:
+  - terraform
+  - github_actions
+directory:
+  - .
+skip-path:
+  # Deliberately insecure examples used to prove the gate blocks them.
+  - tests/gate-fixtures
+compact: true
+quiet: true
+download-external-modules: false

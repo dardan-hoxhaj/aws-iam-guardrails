@@ -1,0 +1,12 @@
+# Copy to terraform.tfvars (git-ignored) and edit.
+aws_region      = "us-east-1"
+name_prefix     = "iam-guardrails"
+allowed_regions = ["us-east-1", "us-west-2"]
+
+# Needed for the SCP AccessDenied drill. SCPs never apply to the
+# management account, so you need one member account to see them work.
+create_sandbox_account = false
+# sandbox_account_email = "you+aws-sandbox@example.com"
+
+# Leave false. Teardown (docs/deploy.md) flips it to true only right before destroy.
+force_destroy_trail_bucket = false
